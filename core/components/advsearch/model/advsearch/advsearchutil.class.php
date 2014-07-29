@@ -167,7 +167,7 @@ abstract class AdvSearchUtil {
      * @return string Elapsed time since start
      */
     public function getElapsedTime($start=0) {
-        $tend= $this->modx->getMicroTime();
+        $tend= microtime(true);
         if ($start) $eTime= ($tend - $start);
         else $eTime= ($tend - $this->tstart);
         $etime = sprintf("%.4fs",$eTime);
